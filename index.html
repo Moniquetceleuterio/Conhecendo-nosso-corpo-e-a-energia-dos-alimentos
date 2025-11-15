@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Conhecendo Nosso Corpo e a Energia dos Alimentos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <style>
+    :root { 
+      --brand: #D5A400;          /* amarelo ouro */
+      --brand-light: #F7E9B0;    /* amarelo claro */
+      --bg-light: #FFFDF4;       /* fundo quase branco amarelado */
+      --text: #333;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text);
+      margin: 40px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 10px;
+      color: var(--brand);
+      font-weight: bold;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      color: var(--brand);
+      max-width: 900px;
+      margin: 40px auto 24px;
+    }
+
+    h3, h4, h5 {
+      max-width: 900px;
+      margin: 30px auto 10px;
+      font-weight: bold;
+      color: var(--brand);
+    }
+
+    p {
+      text-align: justify;
+      text-indent: 0;
+      max-width: 900px;
+      margin: 10px auto;
+    }
+
+    ul {
+      max-width: 900px;
+      margin: 20px auto;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* CAIXA DE ÁUDIO */
+    .audio-box {
+      background: var(--brand-light);
+      border: 1px solid #e0c87c;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 640px;
+      margin: 16px auto 8px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,.05);
+    }
+
+    .audio-box audio { width:100%; outline:none; }
+
+    /* BOTÕES DE VELOCIDADE */
+    .speed-bar {
+      margin-top:12px;
+      display:flex;
+      justify-content:center;
+      gap:8px;
+      flex-wrap:wrap;
+      font-size:14px;
+      align-items:center;
+    }
+
+    .speed-btn {
+      padding:6px 10px;
+      border:1px solid #b58200;
+      border-radius:6px;
+      background:#fff;
+      cursor:pointer;
+      transition:all .2s;
+    }
+
+    .speed-btn:hover { background:var(--brand); color:#fff; }
+    .speed-btn.active { background:var(--brand); color:#fff; border-color:var(--brand); }
+
+    /* VÍDEO */
+    iframe {
+      display:block;
+      margin:24px auto;
+      border-radius:10px;
+      box-shadow:0 0 12px rgba(0,0,0,0.2);
+      transition:transform .2s;
+      max-width:100%;
+    }
+
+    iframe:hover { transform: scale(1.02); }
+
+    /* FORMULÁRIO */
+    .avaliacao {
+      background:#FFF9D8;
+      border:1px solid #e8d47a;
+      border-radius:10px;
+      padding:25px;
+      max-width:720px;
+      margin:35px auto;
+      text-align:center;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .avaliacao h3 { color:var(--brand); margin-bottom:10px; }
+
+    .avaliacao p {
+      text-align: justify;
+      margin:8px auto;
+      max-width:620px;
+      line-height:1.5;
+    }
+
+    .avaliacao a {
+      display:inline-block;
+      background:var(--brand);
+      color:#fff;
+      padding:10px 18px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:14px;
+      transition:background .3s;
+    }
+
+    .avaliacao a:hover { background:#aa8200; }
+
+    /* REFERÊNCIAS */
+    .referencias {
+      max-width:900px;
+      margin:42px auto 0;
+      text-align:left;
+      font-size:.9em;
+      line-height:1.3;
+    }
+
+    .referencias h3 {
+      margin-bottom:8px;
+      color:var(--brand);
+      font-size:1.1em;
+      font-weight:bold;
+    }
+
+    .referencias p { margin:4px 0; }
+
+    /* RODAPÉ */
+    footer {
+      text-align:center;
+      margin-top:48px;
+      font-size:14px;
+      color:#fff;
+      background:var(--brand);
+      padding:24px 10px;
+      border-radius:8px;
+      line-height:1.6;
+    }
+
+    footer a {
+      color:#fff;
+      font-weight:bold;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body { margin:20px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <img src="banner.png" alt="Banner da Aula"
+       style="display:block; margin:0 auto 30px; max-width:100%; border-radius:10px;">
+
+  <h1>Conhecendo Nosso Corpo e a Energia dos Alimentos</h1>
+
+
+  <!-- =============================
+       🔶 AQUI ENTRA O TEXTO COMPLETO DA AULA 3  
+       (já revisei e entreguei pronto na resposta anterior)
+       Você apenas COLA no lugar abaixo
+       ============================= -->
+
+  
+  <!-- COLE AQUI O TEXTO DA AULA 3 -->
+
+
+  <!-- ————————————————————————————————
+       🔊 PODCAST
+       ———————————————————————————————— -->
+  <h2>🎧 Podcast</h2>
+
+  <div class="audio-box">
+    <audio id="meuAudio" controls preload="metadata">
+      <source src="podcast.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+
+    <div class="speed-bar" id="speedBar">
+      <span>Velocidade:</span>
+      <button class="speed-btn" data-rate="0.75">0,75x</button>
+      <button class="speed-btn" data-rate="1">1x</button>
+      <button class="speed-btn" data-rate="1.25">1,25x</button>
+      <button class="speed-btn" data-rate="1.5">1,5x</button>
+      <button class="speed-btn" data-rate="2">2x</button>
+      <span id="rateNow">(atual: 1x)</span>
+    </div>
+  </div>
+
+  <!-- ————————————————————————————————
+       📽️ VÍDEO
+       ———————————————————————————————— -->
+  <h2>📽️ Vídeo</h2>
+
+  <iframe
+    width="700"
+    height="394"
+    src="https://www.youtube.com/embed/SEUVIDEOAQUI?rel=0"
+    allowfullscreen>
+  </iframe>
+
+
+  <!-- ————————————————————————————————
+       📝 FORMULÁRIO
+       ———————————————————————————————— -->
+  <div class="avaliacao">
+    <h3>📝 Questionário de Consolidação</h3>
+
+    <p>Responda ao questionário para consolidar o aprendizado sobre alimentação, energia e movimento.</p>
+
+    <a href="https://forms.gle/SEU_FORM" target="_blank" rel="noopener noreferrer">
+      Acessar questionário
+    </a>
+  </div>
+
+
+  <!-- ————————————————————————————————
+       REFERÊNCIAS
+       ———————————————————————————————— -->
+  <div class="referencias">
+    <h3>Referências</h3>
+    <p>Insira as referências desta aula aqui.</p>
+  </div>
+
+
+  <!-- ————————————————————————————————
+       RODAPÉ
+       ———————————————————————————————— -->
+  <footer>
+    <p>© 2025 | Professora Monique T. Cezário Eleutério</p>
+    <p>Material licenciado sob 
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+        CC BY-NC-SA 4.0
+      </a>
+    </p>
+  </footer>
+
+
+  <!-- ————————————————————————————————
+       SCRIPT CONTROLE DE VELOCIDADE
+       ———————————————————————————————— -->
+  <script>
+    (function () {
+      const audio = document.getElementById('meuAudio');
+      const bar = document.getElementById('speedBar');
+      const rateNow = document.getElementById('rateNow');
+
+      function setActive(rate) {
+        document.querySelectorAll('.speed-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.rate === String(rate));
+        });
+        rateNow.textContent = `(atual: ${String(rate).replace('.', ',')}x)`;
+      }
+
+      bar.addEventListener('click', function (e) {
+        const btn = e.target.closest('.speed-btn');
+        if (!btn) return;
+        const rate = parseFloat(btn.dataset.rate);
+        audio.playbackRate = rate;
+        setActive(rate);
+      });
+
+      setActive(1);
+    })();
+  </script>
+
+</body>
+</html>
