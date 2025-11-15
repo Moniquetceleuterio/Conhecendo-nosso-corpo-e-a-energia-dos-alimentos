@@ -9,7 +9,7 @@
     :root { 
       --brand: #D5A400;          /* amarelo ouro */
       --brand-light: #F7E9B0;    /* amarelo claro */
-      --bg-light: #FFFDF4;       /* fundo quase branco amarelado */
+      --bg-light: #FFFDF4;       /* fundo claro */
       --text: #333;
     }
 
@@ -18,61 +18,63 @@
       background: var(--bg-light);
       color: var(--text);
       margin: 40px;
-      line-height: 1.6;
+      line-height: 1.65;
+    }
+
+    img {
+      display:block;
+      margin:0 auto 30px;
+      border-radius: 10px;
+      max-width: 100%;
     }
 
     h1 {
       text-align: center;
-      font-size: 2rem;
-      margin-top: 10px;
       color: var(--brand);
-      font-weight: bold;
+      font-size: 2rem;
+      margin-top: 5px;
     }
 
     h2 {
-      text-align: center;
-      font-weight: bold;
       color: var(--brand);
+      text-align:center;
+      margin:40px auto 24px;
       max-width: 900px;
-      margin: 40px auto 24px;
     }
 
     h3, h4, h5 {
-      max-width: 900px;
-      margin: 30px auto 10px;
-      font-weight: bold;
       color: var(--brand);
+      max-width: 900px;
+      margin:30px auto 10px;
     }
 
     p {
-      text-align: justify;
-      text-indent: 0;
       max-width: 900px;
       margin: 10px auto;
+      text-align: justify;
     }
 
     ul {
       max-width: 900px;
       margin: 20px auto;
-      line-height: 1.6;
       text-align: justify;
+      line-height: 1.6;
     }
 
-    /* CAIXA DE ÁUDIO */
+    /* ÁUDIO */
     .audio-box {
       background: var(--brand-light);
       border: 1px solid #e0c87c;
-      border-radius: 10px;
-      padding: 20px;
+      border-radius:10px;
+      padding:20px;
       max-width: 640px;
-      margin: 16px auto 8px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,.05);
+      margin: 16px auto 30px;
+      text-align:center;
+      box-shadow:0 0 10px rgba(0,0,0,.05);
     }
 
     .audio-box audio { width:100%; outline:none; }
 
-    /* BOTÕES DE VELOCIDADE */
     .speed-bar {
       margin-top:12px;
       display:flex;
@@ -89,20 +91,20 @@
       border-radius:6px;
       background:#fff;
       cursor:pointer;
-      transition:all .2s;
+      transition:.2s;
     }
 
     .speed-btn:hover { background:var(--brand); color:#fff; }
-    .speed-btn.active { background:var(--brand); color:#fff; border-color:var(--brand); }
+    .speed-btn.active { background:var(--brand); color:#fff; }
 
     /* VÍDEO */
     iframe {
       display:block;
       margin:24px auto;
       border-radius:10px;
-      box-shadow:0 0 12px rgba(0,0,0,0.2);
-      transition:transform .2s;
+      box-shadow:0 0 12px rgba(0,0,0,0.15);
       max-width:100%;
+      transition:transform .2s;
     }
 
     iframe:hover { transform: scale(1.02); }
@@ -114,19 +116,12 @@
       border-radius:10px;
       padding:25px;
       max-width:720px;
-      margin:35px auto;
+      margin:40px auto;
       text-align:center;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
+      box-shadow:0 0 10px rgba(0,0,0,.06);
     }
 
-    .avaliacao h3 { color:var(--brand); margin-bottom:10px; }
-
-    .avaliacao p {
-      text-align: justify;
-      margin:8px auto;
-      max-width:620px;
-      line-height:1.5;
-    }
+    .avaliacao h3 { color:var(--brand); }
 
     .avaliacao a {
       display:inline-block;
@@ -134,10 +129,9 @@
       color:#fff;
       padding:10px 18px;
       border-radius:6px;
-      text-decoration:none;
       font-weight:bold;
       margin-top:14px;
-      transition:background .3s;
+      text-decoration:none;
     }
 
     .avaliacao a:hover { background:#aa8200; }
@@ -145,73 +139,190 @@
     /* REFERÊNCIAS */
     .referencias {
       max-width:900px;
-      margin:42px auto 0;
-      text-align:left;
-      font-size:.9em;
+      margin:42px auto;
+      font-size:0.9em;
       line-height:1.3;
     }
 
-    .referencias h3 {
-      margin-bottom:8px;
-      color:var(--brand);
-      font-size:1.1em;
-      font-weight:bold;
-    }
-
-    .referencias p { margin:4px 0; }
+    .referencias h3 { color:var(--brand); }
 
     /* RODAPÉ */
     footer {
-      text-align:center;
-      margin-top:48px;
-      font-size:14px;
-      color:#fff;
       background:var(--brand);
+      text-align:center;
       padding:24px 10px;
       border-radius:8px;
-      line-height:1.6;
-    }
-
-    footer a {
+      margin-top:50px;
       color:#fff;
-      font-weight:bold;
-      text-decoration: underline;
+      font-size:14px;
+      line-height:1.5;
     }
 
-    @media (max-width: 768px) {
-      body { margin:20px; }
-    }
-
+    footer a { color:white; font-weight:bold; }
   </style>
 </head>
 
 <body>
 
-  <img src="banner.png" alt="Banner da Aula"
-       style="display:block; margin:0 auto 30px; max-width:100%; border-radius:10px;">
+  <!-- BANNER -->
+  <img src="banner-aula3.png" alt="Banner da Aula 3">
 
   <h1>Conhecendo Nosso Corpo e a Energia dos Alimentos</h1>
 
 
-  <!-- =============================
-       🔶 AQUI ENTRA O TEXTO COMPLETO DA AULA 3  
-       (já revisei e entreguei pronto na resposta anterior)
-       Você apenas COLA no lugar abaixo
-       ============================= -->
+  <!-- ======================================================
+       🔶 TEXTO COMPLETO DA AULA (científico + didático)
+       ====================================================== -->
 
-  
-  <!-- COLE AQUI O TEXTO DA AULA 3 -->
+  <h2>Módulo 1 — Alimentação e Energia para o Movimento</h2>
+
+  <p>
+    A alimentação fornece energia e materiais para o corpo crescer, manter funções vitais, estudar, trabalhar e se movimentar.
+    Compreender como os alimentos são utilizados pelo organismo permite analisar a própria rotina alimentar com mais consciência.
+  </p>
+
+  <h3>1.1 Nutrientes: o que o corpo utiliza dos alimentos</h3>
+
+  <p>
+    Os alimentos são formados por substâncias chamadas <strong>nutrientes</strong>. 
+    Eles têm três funções principais: fornecer energia, construir e reparar tecidos, e regular processos biológicos.
+  </p>
+
+  <h4>Macronutrientes</h4>
+
+  <h5>Carboidratos</h5>
+  <p>
+    Fornecem <strong>glicose</strong>, combustível utilizado por músculos e cérebro. 
+    Estão presentes em arroz, pães, massas, batata, mandioca, milho, frutas e leguminosas.
+    O <strong>índice glicêmico</strong> indica a velocidade com que elevam a glicose no sangue.
+  </p>
+
+  <h5>Proteínas</h5>
+  <p>
+    Participam da formação de músculos, pele e órgãos. São formadas por aminoácidos essenciais. 
+    Fontes animais (ovos, carnes, leite) e vegetais (feijão, lentilha, soja) contribuem de forma complementar.
+  </p>
+
+  <h5>Gorduras</h5>
+  <p>
+    Fornecem energia concentrada, participam da produção hormonal e da proteção de órgãos. 
+    Gorduras insaturadas (castanhas, azeite, peixes) têm efeitos mais adequados ao perfil metabólico.
+  </p>
+
+  <h4>Micronutrientes</h4>
+  <p>
+    Vitaminas e minerais regulam reações químicas, imunidade e formação de tecidos. 
+    São encontrados em frutas, verduras, legumes, grãos integrais, carnes e ovos.
+  </p>
+
+  <h3>1.2 Importância da água</h3>
+  <p>
+    A água corresponde a cerca de dois terços do peso corporal. 
+    Atua na digestão, absorção de nutrientes, circulação e regulação de temperatura. 
+    A hidratação insuficiente prejudica a concentração e o desempenho físico.
+  </p>
 
 
-  <!-- ————————————————————————————————
-       🔊 PODCAST
-       ———————————————————————————————— -->
+  <!-- ======================================================
+       MÓDULO 2
+       ====================================================== -->
+
+  <h2>Módulo 2 — Organização da Alimentação e Escolhas Diárias</h2>
+
+  <p>
+    Uma alimentação equilibrada envolve variedade, proporção adequada de grupos alimentares e moderação no consumo de produtos ultraprocessados.
+  </p>
+
+  <h3>2.1 Pirâmide alimentar</h3>
+
+  <h4>Base: grupo energético</h4>
+  <p>Grãos, tubérculos, arroz, pães e massas fornecem energia para o dia a dia.</p>
+
+  <h4>Segundo nível: alimentos reguladores</h4>
+  <p>Verduras, legumes e frutas fornecem fibras, vitaminas e minerais.</p>
+
+  <h4>Terceiro nível: alimentos construtores</h4>
+  <p>Carnes, ovos, peixes, leite e leguminosas fornecem proteínas.</p>
+
+  <h4>Topo: açúcares, gorduras e ultraprocessados</h4>
+  <p>Devem ser consumidos apenas ocasionalmente.</p>
+
+
+  <!-- ======================================================
+       MÓDULO 3
+       ====================================================== -->
+
+  <h2>Módulo 3 — Digestão, Metabolismo e Energia</h2>
+
+  <h3>3.1 Digestão e absorção</h3>
+
+  <ul>
+    <li><strong>Boca:</strong> mastigação e início da digestão dos carboidratos.</li>
+    <li><strong>Estômago:</strong> quebra química e mecânica dos alimentos.</li>
+    <li><strong>Intestino delgado:</strong> maior parte da digestão e da absorção.</li>
+    <li><strong>Fígado:</strong> armazenamento de glicogênio e metabolismo de nutrientes.</li>
+    <li><strong>Intestino grosso:</strong> reabsorção de água e formação das fezes.</li>
+  </ul>
+
+  <p>
+    Após absorção, os nutrientes entram nas células e são convertidos em energia química (ATP), usada para todas as funções vitais.
+  </p>
+
+  <h3>3.2 Balanço energético</h3>
+
+  <p>
+    O peso corporal depende do equilíbrio entre ingestão e gasto de energia. 
+    Consumo maior que gasto leva ao acúmulo de gordura. 
+    Gasto maior que consumo leva ao uso de reservas energéticas.
+  </p>
+
+
+  <!-- ======================================================
+       MÓDULO 4
+       ====================================================== -->
+
+  <h2>Módulo 4 — Alimentação, Movimento e Prevenção de Doenças</h2>
+
+  <h3>4.1 Doenças relacionadas ao estilo de vida</h3>
+
+  <ul>
+    <li>obesidade;</li>
+    <li>diabetes tipo 2;</li>
+    <li>hipertensão arterial;</li>
+    <li>doenças cardiovasculares.</li>
+  </ul>
+
+  <h3>4.2 Papel da atividade física</h3>
+  <p>
+    Contribui para o controle da glicemia, pressão arterial, composição corporal, humor e sono.
+    Para adolescentes, recomenda-se atividade diária de intensidade moderada a vigorosa.
+  </p>
+
+
+  <!-- ======================================================
+       MÓDULO 5
+       ====================================================== -->
+
+  <h2>Módulo 5 — Alimentação, Sono, Estresse e Saúde Mental</h2>
+
+  <p>
+    Alimentação, sono e atividade física influenciam diretamente o humor, a atenção, a memória e o desempenho escolar.
+  </p>
+
+  <p>
+    Dietas extremas, uso inadequado de medicamentos e padrões alimentares rígidos podem aumentar o risco de transtornos alimentares e ansiedade.
+  </p>
+
+
+  <!-- ======================================================
+       PODCAST
+       ====================================================== -->
+
   <h2>🎧 Podcast</h2>
 
   <div class="audio-box">
     <audio id="meuAudio" controls preload="metadata">
-      <source src="podcast.mp3" type="audio/mpeg">
-      Seu navegador não suporta áudio.
+      <source src="COLAR_AQUI_O_ARQUIVO_DO_PODCAST.mp3" type="audio/mpeg">
     </audio>
 
     <div class="speed-bar" id="speedBar">
@@ -225,58 +336,61 @@
     </div>
   </div>
 
-  <!-- ————————————————————————————————
-       📽️ VÍDEO
-       ———————————————————————————————— -->
+
+  <!-- ======================================================
+       VÍDEO
+       ====================================================== -->
   <h2>📽️ Vídeo</h2>
 
   <iframe
     width="700"
     height="394"
-    src="https://www.youtube.com/embed/SEUVIDEOAQUI?rel=0"
+    src="https://www.youtube.com/embed/COLE_AQUI_O_LINK"
     allowfullscreen>
   </iframe>
 
 
-  <!-- ————————————————————————————————
-       📝 FORMULÁRIO
-       ———————————————————————————————— -->
+  <!-- ======================================================
+       FORMULÁRIO
+       ====================================================== -->
+
   <div class="avaliacao">
     <h3>📝 Questionário de Consolidação</h3>
+    <p>
+      Responda ao formulário para consolidar o aprendizado sobre alimentação, energia e movimento.
+    </p>
 
-    <p>Responda ao questionário para consolidar o aprendizado sobre alimentação, energia e movimento.</p>
-
-    <a href="https://forms.gle/SEU_FORM" target="_blank" rel="noopener noreferrer">
-      Acessar questionário
-    </a>
+    <a href="https://forms.gle/COLE_AQUI" target="_blank">Acessar questionário</a>
   </div>
 
 
-  <!-- ————————————————————————————————
+  <!-- ======================================================
        REFERÊNCIAS
-       ———————————————————————————————— -->
+       ====================================================== -->
+
   <div class="referencias">
     <h3>Referências</h3>
-    <p>Insira as referências desta aula aqui.</p>
+    <p>NAHAS, M. V. Atividade Física e Saúde. 2017.</p>
+    <p>BRASIL. Guia Alimentar para a População Brasileira. 2014.</p>
+    <p>BUSS, P. Promoção da Saúde e Qualidade de Vida. 2000.</p>
   </div>
 
 
-  <!-- ————————————————————————————————
+  <!-- ======================================================
        RODAPÉ
-       ———————————————————————————————— -->
+       ====================================================== -->
+
   <footer>
-    <p>© 2025 | Professora Monique T. Cezário Eleutério</p>
-    <p>Material licenciado sob 
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-        CC BY-NC-SA 4.0
-      </a>
-    </p>
+    © 2025 | Professora Monique T. Cezário Eleutério  
+    <br>
+    Licença: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a>
   </footer>
 
 
-  <!-- ————————————————————————————————
-       SCRIPT CONTROLE DE VELOCIDADE
-       ———————————————————————————————— -->
+  <!-- ======================================================
+       SCRIPT
+       ====================================================== -->
+
   <script>
     (function () {
       const audio = document.getElementById('meuAudio');
