@@ -60,6 +60,57 @@
       line-height: 1.6;
     }
 
+    /* FLIPBOOK: GUIA DE INCORPORAÇÃO */
+    .flipbook-section {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 40px auto 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .flipbook-section h2,
+    .flipbook-section h3 {
+      color: var(--brand);
+      text-align: left;
+      margin-left: 0;
+    }
+
+    .flipbook-section ol {
+      padding-left: 20px;
+      max-width: 900px;
+      margin: 10px auto 16px;
+    }
+
+    .flipbook-section ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    .code-box {
+      background: #f5f7fb;
+      padding: 16px;
+      border-radius: 8px;
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+      max-width: 900px;
+      margin: 12px auto 18px;
+      border: 1px solid #d5dbee;
+    }
+
+    .code-box pre {
+      margin: 0;
+      white-space: pre;
+    }
+
+    .flipbook-tags {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 16px;
+    }
+
     /* LIVRO DIGITAL */
     .livro-container {
       max-width: 900px;
@@ -234,7 +285,82 @@
   <!-- BANNER -->
   <img src="banner2.png" alt="Banner da aula 3">
 
-    <!-- LIVRO DIGITAL ABAIXO DO BANNER -->
+  <!-- GUIA PARA INCORPORAR O FLIPBOOK -->
+  <section class="flipbook-section" id="flipbook">
+    <h2>Guia para incorporar o flipbook da aula</h2>
+
+    <h3>Índice</h3>
+    <ol>
+      <li>Iframe (recomendado)
+        <ol>
+          <li>Iframe responsivo</li>
+          <li>Uso do código Iframe no WordPress e em outros CMS</li>
+        </ol>
+      </li>
+      <li>Janela pop-up</li>
+      <li>Plug-in do WordPress
+        <ol>
+          <li>Incorporar um livro por meio de um link</li>
+          <li>Incorporar um livro por meio de um atalho (shortcode)</li>
+        </ol>
+      </li>
+    </ol>
+
+    <p>
+      O FlipHTML5 permite incorporar o flipbook diretamente no site ou blog. Após publicar o livro:
+      acesse <strong>Publicações</strong> &rarr; clique em <strong>⋮</strong> ao lado do livro &rarr;
+      selecione <strong>Embutir</strong> e escolha o formato desejado (Iframe, janela pop-up ou WordPress).
+    </p>
+
+    <h3>1. Iframe responsivo (recomendado)</h3>
+    <p>
+      Use este modelo de código para incorporar o flipbook de forma responsiva. Substitua
+      <code>https://example.com/seu-flipbook</code> pelo link do seu livro gerado no FlipHTML5.
+    </p>
+
+    <div class="code-box">
+<pre><code>&lt;div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75%;"&gt;
+  &lt;iframe
+    src="https://example.com/seu-flipbook"
+    style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+    allowfullscreen
+    scrolling="no"&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <h3>1.2 Uso do Iframe no WordPress e em outros CMS</h3>
+    <p>
+      No WordPress ou em outros CMS, abra o editor da página ou postagem, adicione um bloco de
+      <strong>HTML personalizado</strong> e cole o mesmo código de incorporação do Iframe.
+    </p>
+
+    <h3>2. Janela pop-up</h3>
+    <p>
+      Na opção <strong>Janela pop-up</strong> do FlipHTML5, copie o script de janela pop-up e
+      cole entre as tags <code>&lt;head&gt;...&lt;/head&gt;</code> do seu arquivo HTML. Depois,
+      adicione os atributos indicados ao elemento (botão, imagem ou link) que deverá abrir
+      o flipbook quando for clicado.
+    </p>
+
+    <h3>3. Plug-in do WordPress</h3>
+    <p>
+      Com o plug-in do FlipHTML5 instalado e ativado no WordPress, é possível:
+    </p>
+    <ul>
+      <li><strong>3.1</strong> Incorporar o livro colando diretamente o link do flipbook na postagem ou página.</li>
+      <li><strong>3.2</strong> Usar um atalho (shortcode) gerado pelo plug-in para inserir o livro no local desejado.</li>
+    </ul>
+
+    <p class="flipbook-tags">
+      <strong>Termos relacionados:</strong>
+      incorporar flipbook, como incorporar um flipbook, guia de incorporação de flipbook,
+      incorporação de flipbooks no site, incorporação de flipbooks no blog, código iframe de flipbook,
+      incorporação de flipbooks com HTML, FlipHTML5.
+    </p>
+  </section>
+
+  <!-- LIVRO DIGITAL ABAIXO DO GUIA -->
   <div class="livro-container" id="livro">
     
     <!-- PÁGINA 1 -->
@@ -351,21 +477,21 @@
   <h2>🎧 Podcast: Como cozinhar mudou o nosso corpo e a nossa relação com a comida</h2>
 
   <div class="audio-box">
-  <audio id="meuAudio" controls preload="metadata">
-    <source src="Como_Cozinhar_Moldou_Nosso_Cérebro_e_Obesidade.m4a" type="audio/mp4">
-    Seu navegador não suporta áudio.
-  </audio>
+    <audio id="meuAudio" controls preload="metadata">
+      <source src="Como_Cozinhar_Moldou_Nosso_Cérebro_e_Obesidade.m4a" type="audio/mp4">
+      Seu navegador não suporta áudio.
+    </audio>
 
-  <div class="speed-bar" id="speedBar">
-    <span>Velocidade:</span>
-    <button class="speed-btn" data-rate="0.75">0,75x</button>
-    <button class="speed-btn" data-rate="1">1x</button>
-    <button class="speed-btn" data-rate="1.25">1,25x</button>
-    <button class="speed-btn" data-rate="1.5">1,5x</button>
-    <button class="speed-btn" data-rate="2">2x</button>
-    <span id="rateNow">(atual: 1x)</span>
+    <div class="speed-bar" id="speedBar">
+      <span>Velocidade:</span>
+      <button class="speed-btn" data-rate="0.75">0,75x</button>
+      <button class="speed-btn" data-rate="1">1x</button>
+      <button class="speed-btn" data-rate="1.25">1,25x</button>
+      <button class="speed-btn" data-rate="1.5">1,5x</button>
+      <button class="speed-btn" data-rate="2">2x</button>
+      <span id="rateNow">(atual: 1x)</span>
+    </div>
   </div>
-</div>
 
 
   <!-- VÍDEO -->
