@@ -6,9 +6,9 @@
   
   <style>
     :root { 
-      --brand: #D5A400;          /* amarelo ouro */
-      --brand-light: #F7E9B0;    /* amarelo claro */
-      --bg-light: #FFFDF4;       /* fundo claro */
+      --brand: #003366;          /* azul marinho */
+      --brand-light: #e0e6f5;    /* azul claro */
+      --bg-light: #f5f7fb;       /* fundo claro */
       --text: #333;
     }
 
@@ -60,14 +60,82 @@
       line-height: 1.6;
     }
 
+    /* LIVRO DIGITAL */
+    .livro-container {
+      max-width: 900px;
+      margin: 30px auto 10px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.06);
+      padding: 24px 26px 28px;
+      position: relative;
+    }
+
+    .livro-pagina {
+      display: none;
+    }
+
+    .livro-pagina.ativa {
+      display: block;
+    }
+
+    .livro-titulo {
+      font-weight: bold;
+      color: var(--brand);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .livro-subtitulo {
+      font-weight: bold;
+      color: var(--brand);
+      margin-top: 14px;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .livro-container p {
+      margin: 6px 0;
+      text-align: justify;
+    }
+
+    .livro-controles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 18px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .livro-btn {
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .livro-btn:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    .livro-indicador {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
     /* ÁUDIO */
     .audio-box {
       background: var(--brand-light);
-      border: 1px solid #e0c87c;
+      border: 1px solid #c1c9e6;
       border-radius:10px;
       padding:20px;
       max-width: 640px;
-      margin: 16px auto 30px;
+      margin: 32px auto 30px;
       text-align:center;
       box-shadow:0 0 10px rgba(0,0,0,.05);
     }
@@ -86,7 +154,7 @@
 
     .speed-btn {
       padding:6px 10px;
-      border:1px solid #b58200;
+      border:1px solid var(--brand);
       border-radius:6px;
       background:#fff;
       cursor:pointer;
@@ -110,8 +178,8 @@
 
     /* FORMULÁRIO */
     .avaliacao {
-      background:#FFF9D8;
-      border:1px solid #e8d47a;
+      background:#e9f0ff;
+      border:1px solid #c3d0f0;
       border-radius:10px;
       padding:25px;
       max-width:720px;
@@ -133,7 +201,7 @@
       text-decoration:none;
     }
 
-    .avaliacao a:hover { background:#aa8200; }
+    .avaliacao a:hover { background:#001f40; }
 
     /* REFERÊNCIAS */
     .referencias {
@@ -164,164 +232,130 @@
 <body>
 
   <!-- BANNER -->
-  <img src="banner2.png" alt="banner2.png">
+  <img src="banner2.png" alt="Banner da aula 3">
 
-  <h1></h1>
+  <h1>Conhecendo Nosso Corpo e a Energia dos Alimentos</h1>
 
+  <!-- LIVRO DIGITAL ABAIXO DO BANNER -->
+  <div class="livro-container" id="livro">
+    
+    <!-- PÁGINA 1 -->
+    <div class="livro-pagina ativa">
+      <div class="livro-titulo">Apresentação da Aula</div>
+      <p>
+        Esta aula relaciona alimentação, energia e movimento. O objetivo é compreender
+        como os nutrientes dos alimentos são utilizados pelo corpo e como isso se conecta
+        com atividade física, saúde e qualidade de vida.
+      </p>
+      <p>
+        Ao longo das páginas, leia com atenção e faça conexões com a sua rotina:
+        o que você come, quanto se movimenta e como se sente ao longo do dia.
+      </p>
+    </div>
 
-  <!-- ======================================================
-       🔶 TEXTO COMPLETO DA AULA (científico + didático)
-       ====================================================== -->
+    <!-- PÁGINA 2 -->
+    <div class="livro-pagina">
+      <div class="livro-titulo">Nutrientes e Funções</div>
+      <p>
+        Os alimentos são formados por nutrientes. Eles fornecem energia, constroem
+        e reparam tecidos e regulam processos biológicos. Dividem-se em macronutrientes
+        e micronutrientes.
+      </p>
+      <p class="livro-subtitulo">Macronutrientes</p>
+      <p>
+        Carboidratos fornecem glicose para cérebro e músculos. Proteínas participam
+        da formação de músculos, pele e órgãos. Gorduras fornecem energia concentrada
+        e participam da produção hormonal e da proteção de órgãos.
+      </p>
+      <p class="livro-subtitulo">Micronutrientes</p>
+      <p>
+        Vitaminas e minerais regulam reações químicas, imunidade e formação óssea.
+        Estão presentes em frutas, verduras, legumes, grãos integrais, carnes e ovos.
+      </p>
+    </div>
 
-  <h2>Módulo 1 — Alimentação e Energia para o Movimento</h2>
+    <!-- PÁGINA 3 -->
+    <div class="livro-pagina">
+      <div class="livro-titulo">Água e Organização da Alimentação</div>
+      <p>
+        A água corresponde a cerca de dois terços do peso corporal. Participa da digestão,
+        da absorção de nutrientes, da circulação e da regulação da temperatura.
+        A hidratação insuficiente prejudica concentração e desempenho físico.
+      </p>
+      <p class="livro-subtitulo">Grupos de alimentos</p>
+      <p>
+        Modelos como a pirâmide alimentar organizam os alimentos em grupos: base energética
+        (grãos e tubérculos), reguladores (frutas, verduras e legumes), construtores
+        (carnes, ovos, leite, leguminosas) e topo (açúcares, gorduras e ultraprocessados,
+        que devem ter consumo ocasional).
+      </p>
+    </div>
 
-  <p>
-    A alimentação fornece energia e materiais para o corpo crescer, manter funções vitais, estudar, trabalhar e se movimentar.
-    Compreender como os alimentos são utilizados pelo organismo permite analisar a própria rotina alimentar com mais consciência.
-  </p>
+    <!-- PÁGINA 4 -->
+    <div class="livro-pagina">
+      <div class="livro-titulo">Digestão, Metabolismo e Energia</div>
+      <p>
+        O sistema digestório transforma os alimentos em moléculas menores.
+        A digestão e a absorção ocorrem na boca, estômago, intestino delgado, fígado
+        e intestino grosso. Após a absorção, os nutrientes entram nas células
+        e são convertidos em energia química (ATP).
+      </p>
+      <p class="livro-subtitulo">Balanço energético</p>
+      <p>
+        O peso corporal depende do equilíbrio entre ingestão e gasto de energia.
+        Quando o consumo é maior que o gasto, ocorre acúmulo de gordura.
+        Quando o gasto é maior, o corpo utiliza reservas energéticas.
+      </p>
+    </div>
 
-  <h3>1.1 Nutrientes: o que o corpo utiliza dos alimentos</h3>
+    <!-- PÁGINA 5 -->
+    <div class="livro-pagina">
+      <div class="livro-titulo">Alimentação, Movimento e Saúde</div>
+      <p>
+        A combinação de alimentação rica em ultraprocessados, alto consumo calórico
+        e baixo nível de atividade física está associada a obesidade, diabetes tipo 2,
+        hipertensão arterial e doenças cardiovasculares.
+      </p>
+      <p>
+        A prática regular de atividade física contribui para o controle da glicemia,
+        da pressão arterial, da composição corporal e do sono. Para adolescentes,
+        recomenda-se acumular tempo diário de atividade física de intensidade
+        moderada a vigorosa.
+      </p>
+    </div>
 
-  <p>
-    Os alimentos são formados por substâncias chamadas <strong>nutrientes</strong>. 
-    Eles têm três funções principais: fornecer energia, construir e reparar tecidos, e regular processos biológicos.
-  </p>
+    <!-- PÁGINA 6 -->
+    <div class="livro-pagina">
+      <div class="livro-titulo">Alimentação, Sono e Saúde Mental</div>
+      <p>
+        Alimentação, sono e atividade física influenciam humor, atenção e desempenho escolar.
+        Rotinas muito restritivas, uso inadequado de medicamentos e padrões alimentares
+        extremos podem aumentar o risco de transtornos alimentares e ansiedade.
+      </p>
+      <p>
+        O objetivo desta aula é que você observe os seus hábitos, utilize as ferramentas
+        da página para estimar gasto energético e ingestão calórica e reflita sobre
+        possíveis ajustes para cuidar de forma integrada do corpo e da mente.
+      </p>
+    </div>
 
-  <h4>Macronutrientes</h4>
+    <!-- CONTROLES -->
+    <div class="livro-controles">
+      <button class="livro-btn" id="livro-anterior">◀ Página anterior</button>
+      <span class="livro-indicador" id="livro-indicador">Página 1 de 6</span>
+      <button class="livro-btn" id="livro-proxima">Próxima página ▶</button>
+    </div>
 
-  <h5>Carboidratos</h5>
-  <p>
-    Fornecem <strong>glicose</strong>, combustível utilizado por músculos e cérebro. 
-    Estão presentes em arroz, pães, massas, batata, mandioca, milho, frutas e leguminosas.
-    O <strong>índice glicêmico</strong> indica a velocidade com que elevam a glicose no sangue.
-  </p>
-
-  <h5>Proteínas</h5>
-  <p>
-    Participam da formação de músculos, pele e órgãos. São formadas por aminoácidos essenciais. 
-    Fontes animais (ovos, carnes, leite) e vegetais (feijão, lentilha, soja) contribuem de forma complementar.
-  </p>
-
-  <h5>Gorduras</h5>
-  <p>
-    Fornecem energia concentrada, participam da produção hormonal e da proteção de órgãos. 
-    Gorduras insaturadas (castanhas, azeite, peixes) têm efeitos mais adequados ao perfil metabólico.
-  </p>
-
-  <h4>Micronutrientes</h4>
-  <p>
-    Vitaminas e minerais regulam reações químicas, imunidade e formação de tecidos. 
-    São encontrados em frutas, verduras, legumes, grãos integrais, carnes e ovos.
-  </p>
-
-  <h3>1.2 Importância da água</h3>
-  <p>
-    A água corresponde a cerca de dois terços do peso corporal. 
-    Atua na digestão, absorção de nutrientes, circulação e regulação de temperatura. 
-    A hidratação insuficiente prejudica a concentração e o desempenho físico.
-  </p>
-
-
-  <!-- ======================================================
-       MÓDULO 2
-       ====================================================== -->
-
-  <h2>Módulo 2 — Organização da Alimentação e Escolhas Diárias</h2>
-
-  <p>
-    Uma alimentação equilibrada envolve variedade, proporção adequada de grupos alimentares e moderação no consumo de produtos ultraprocessados.
-  </p>
-
-  <h3>2.1 Pirâmide alimentar</h3>
-
-  <h4>Base: grupo energético</h4>
-  <p>Grãos, tubérculos, arroz, pães e massas fornecem energia para o dia a dia.</p>
-
-  <h4>Segundo nível: alimentos reguladores</h4>
-  <p>Verduras, legumes e frutas fornecem fibras, vitaminas e minerais.</p>
-
-  <h4>Terceiro nível: alimentos construtores</h4>
-  <p>Carnes, ovos, peixes, leite e leguminosas fornecem proteínas.</p>
-
-  <h4>Topo: açúcares, gorduras e ultraprocessados</h4>
-  <p>Devem ser consumidos apenas ocasionalmente.</p>
-
-
-  <!-- ======================================================
-       MÓDULO 3
-       ====================================================== -->
-
-  <h2>Módulo 3 — Digestão, Metabolismo e Energia</h2>
-
-  <h3>3.1 Digestão e absorção</h3>
-
-  <ul>
-    <li><strong>Boca:</strong> mastigação e início da digestão dos carboidratos.</li>
-    <li><strong>Estômago:</strong> quebra química e mecânica dos alimentos.</li>
-    <li><strong>Intestino delgado:</strong> maior parte da digestão e da absorção.</li>
-    <li><strong>Fígado:</strong> armazenamento de glicogênio e metabolismo de nutrientes.</li>
-    <li><strong>Intestino grosso:</strong> reabsorção de água e formação das fezes.</li>
-  </ul>
-
-  <p>
-    Após absorção, os nutrientes entram nas células e são convertidos em energia química (ATP), usada para todas as funções vitais.
-  </p>
-
-  <h3>3.2 Balanço energético</h3>
-
-  <p>
-    O peso corporal depende do equilíbrio entre ingestão e gasto de energia. 
-    Consumo maior que gasto leva ao acúmulo de gordura. 
-    Gasto maior que consumo leva ao uso de reservas energéticas.
-  </p>
-
-
-  <!-- ======================================================
-       MÓDULO 4
-       ====================================================== -->
-
-  <h2>Módulo 4 — Alimentação, Movimento e Prevenção de Doenças</h2>
-
-  <h3>4.1 Doenças relacionadas ao estilo de vida</h3>
-
-  <ul>
-    <li>obesidade;</li>
-    <li>diabetes tipo 2;</li>
-    <li>hipertensão arterial;</li>
-    <li>doenças cardiovasculares.</li>
-  </ul>
-
-  <h3>4.2 Papel da atividade física</h3>
-  <p>
-    Contribui para o controle da glicemia, pressão arterial, composição corporal, humor e sono.
-    Para adolescentes, recomenda-se atividade diária de intensidade moderada a vigorosa.
-  </p>
+  </div>
 
 
-  <!-- ======================================================
-       MÓDULO 5
-       ====================================================== -->
-
-  <h2>Módulo 5 — Alimentação, Sono, Estresse e Saúde Mental</h2>
-
-  <p>
-    Alimentação, sono e atividade física influenciam diretamente o humor, a atenção, a memória e o desempenho escolar.
-  </p>
-
-  <p>
-    Dietas extremas, uso inadequado de medicamentos e padrões alimentares rígidos podem aumentar o risco de transtornos alimentares e ansiedade.
-  </p>
-
-
-  <!-- ======================================================
-       PODCAST
-       ====================================================== -->
-
+  <!-- PODCAST -->
   <h2>🎧 Podcast</h2>
 
   <div class="audio-box">
     <audio id="meuAudio" controls preload="metadata">
-      <source src="Como_Cozinhar_Moldou_Nosso_Cérebro_e_Obesidade" type="audio/mpeg">
+      <source src="Como_Cozinhar_Moldou_Nosso_Cérebro_e_Obesidade.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
     </audio>
 
     <div class="speed-bar" id="speedBar">
@@ -336,23 +370,18 @@
   </div>
 
 
-  <!-- ======================================================
-       VÍDEO
-       ====================================================== -->
+  <!-- VÍDEO -->
   <h2>📽️ Vídeo</h2>
 
   <iframe
     width="700"
     height="394"
-     src="https://https://youtu.be/Dx8fixj2P4U?si=I1XRqt8GX6HGynrs"
+    src="https://www.youtube.com/embed/Dx8fixj2P4U"
     allowfullscreen>
   </iframe>
 
 
-  <!-- ======================================================
-       FORMULÁRIO
-       ====================================================== -->
-
+  <!-- FORMULÁRIO -->
   <div class="avaliacao">
     <h3>📝 Questionário de Consolidação</h3>
     <p>
@@ -363,10 +392,7 @@
   </div>
 
 
-  <!-- ======================================================
-       REFERÊNCIAS
-       ====================================================== -->
-
+  <!-- REFERÊNCIAS -->
   <div class="referencias">
     <h3>Referências</h3>
     <p>NAHAS, M. V. Atividade Física e Saúde. 2017.</p>
@@ -375,10 +401,7 @@
   </div>
 
 
-  <!-- ======================================================
-       RODAPÉ
-       ====================================================== -->
-
+  <!-- RODAPÉ -->
   <footer>
     © 2025 | Professora Monique T. Cezário Eleutério  
     <br>
@@ -386,11 +409,9 @@
   </footer>
 
 
-  <!-- ======================================================
-       SCRIPT
-       ====================================================== -->
-
+  <!-- SCRIPTS -->
   <script>
+    // Controles de velocidade do áudio
     (function () {
       const audio = document.getElementById('meuAudio');
       const bar = document.getElementById('speedBar');
@@ -412,6 +433,42 @@
       });
 
       setActive(1);
+    })();
+
+    // Livro digital
+    (function () {
+      const paginas = document.querySelectorAll('.livro-pagina');
+      const btnPrev = document.getElementById('livro-anterior');
+      const btnNext = document.getElementById('livro-proxima');
+      const indicador = document.getElementById('livro-indicador');
+
+      let paginaAtual = 0;
+      const total = paginas.length;
+
+      function atualizarLivro() {
+        paginas.forEach((pg, i) => {
+          pg.classList.toggle('ativa', i === paginaAtual);
+        });
+        indicador.textContent = `Página ${paginaAtual + 1} de ${total}`;
+        btnPrev.disabled = paginaAtual === 0;
+        btnNext.disabled = paginaAtual === total - 1;
+      }
+
+      btnPrev.addEventListener('click', () => {
+        if (paginaAtual > 0) {
+          paginaAtual--;
+          atualizarLivro();
+        }
+      });
+
+      btnNext.addEventListener('click', () => {
+        if (paginaAtual < total - 1) {
+          paginaAtual++;
+          atualizarLivro();
+        }
+      });
+
+      atualizarLivro();
     })();
   </script>
 
