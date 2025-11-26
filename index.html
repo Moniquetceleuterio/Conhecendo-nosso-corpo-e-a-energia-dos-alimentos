@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+  <title>Conhecendo Nosso Corpo e a Energia dos Alimentos</title>
+
   <style>
     :root { 
-      --brand: #003366;
-      --brand-light: #e0e6f5;
-      --bg-light: #f5f7fb;
+      --brand: #003366;          /* azul marinho */
+      --bg-light: #f5f7fb;       /* fundo claro */
       --text: #333;
     }
 
@@ -27,68 +27,47 @@
       max-width: 100%;
     }
 
-    h1 {
-      text-align: center;
-      color: var(--brand);
-      font-size: 2rem;
-      margin-top: 5px;
-    }
-
     h2 {
       color: var(--brand);
       text-align:center;
       margin:40px auto 24px;
       max-width: 900px;
+      font-size: 1.6rem;
     }
 
-    h3, h4, h5 {
-      color: var(--brand);
+    .flipbook-wrapper {
       max-width: 900px;
-      margin:30px auto 10px;
-    }
-
-    p {
-      max-width: 900px;
-      margin: 10px auto;
-      text-align: justify;
-    }
-
-    ul {
-      max-width: 900px;
-      margin: 20px auto;
-      text-align: justify;
-      line-height: 1.6;
-    }
-
-    /* LIVRO DIGITAL */
-    .livro-container {
-      max-width: 900px;
-      margin: 30px auto 10px;
-      background: #fff;
+      margin: 0 auto 40px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.06);
-      padding: 24px 26px 28px;
-      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0,0,0,0.12);
     }
 
-    .livro-pagina { display: none; }
-    .livro-pagina.ativa { display: block; }
-
-    .livro-titulo {
-      font-weight: bold;
-      color: var(--brand);
-      margin-bottom: 10px;
-      font-size: 1.1rem;
+    .flipbook-wrapper iframe {
+      width: 100%;
+      height: 650px;     /* pode ajustar se quiser mais alto ou mais baixo */
+      border: none;
+      border-radius: 10px;
     }
+  </style>
+</head>
 
-    .livro-subtitulo {
-      font-weight: bold;
-      color: var(--brand);
-      margin-top: 14px;
-      margin-bottom: 4px;
-      font-size: 1rem;
-    }
+<body>
 
-    .livro-container p {
-      margin: 6px 0;
-      text-align: justify;
+  <!-- BANNER -->
+  <img src="banner2.png" alt="Banner da aula">
+
+  <!-- FLIPBOOK HEYZINE EMBUTIDO -->
+  <h2>Flipbook da aula</h2>
+
+  <div class="flipbook-wrapper">
+    <iframe
+      allowfullscreen="allowfullscreen"
+      allow="clipboard-write"
+      scrolling="no"
+      src="https://heyzine.com/flip-book/e123771916.html">
+    </iframe>
+  </div>
+
+</body>
+</html>
