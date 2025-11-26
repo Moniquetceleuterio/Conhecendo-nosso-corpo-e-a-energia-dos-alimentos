@@ -6,9 +6,8 @@
   
   <style>
     :root { 
-      --brand: #003366;          /* azul marinho */
-      --brand-light: #e0e6f5;    /* azul claro */
-      --bg-light: #f5f7fb;       /* fundo claro */
+      --brand: #003366;
+      --bg-light: #f5f7fb;
       --text: #333;
     }
 
@@ -27,315 +26,47 @@
       max-width: 100%;
     }
 
-    h1 {
-      text-align: center;
-      color: var(--brand);
-      font-size: 2rem;
-      margin-top: 5px;
-    }
-
     h2 {
-      color: var(--brand);
       text-align:center;
+      color:var(--brand);
       margin:40px auto 24px;
-      max-width: 900px;
+      font-size: 1.6rem;
     }
 
-    h3, h4, h5 {
-      color: var(--brand);
+    /* Flipbook responsivo */
+    .flipbook-wrapper {
       max-width: 900px;
-      margin:30px auto 10px;
-    }
-
-    p {
-      max-width: 900px;
-      margin: 10px auto;
-      text-align: justify;
-    }
-
-    ul {
-      max-width: 900px;
-      margin: 20px auto;
-      text-align: justify;
-      line-height: 1.6;
-    }
-
-    /* LIVRO DIGITAL */
-    .livro-container {
-      max-width: 900px;
-      margin: 30px auto 10px;
-      background: #fff;
+      margin: 0 auto 40px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.06);
-      padding: 24px 26px 28px;
-      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0,0,0,0.12);
     }
 
-    .livro-pagina {
-      display: none;
-    }
-
-    .livro-pagina.ativa {
-      display: block;
-    }
-
-    .livro-titulo {
-      font-weight: bold;
-      color: var(--brand);
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    .livro-subtitulo {
-      font-weight: bold;
-      color: var(--brand);
-      margin-top: 14px;
-      margin-bottom: 4px;
-      font-size: 1rem;
-    }
-
-    .livro-container p {
-      margin: 6px 0;
-      text-align: justify;
-    }
-
-    .livro-controles {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 18px;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .livro-btn {
-      background: var(--brand);
-      color: #fff;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    .livro-btn:disabled {
-      opacity: 0.5;
-      cursor: default;
-    }
-
-    .livro-indicador {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    /* ÁUDIO */
-    .audio-box {
-      background: var(--brand-light);
-      border: 1px solid #c1c9e6;
-      border-radius:10px;
-      padding:20px;
-      max-width: 640px;
-      margin: 32px auto 30px;
-      text-align:center;
-      box-shadow:0 0 10px rgba(0,0,0,.05);
-    }
-
-    .audio-box audio { width:100%; outline:none; }
-
-    .speed-bar {
-      margin-top:12px;
-      display:flex;
-      justify-content:center;
-      gap:8px;
-      flex-wrap:wrap;
-      font-size:14px;
-      align-items:center;
-    }
-
-    .speed-btn {
-      padding:6px 10px;
-      border:1px solid var(--brand);
-      border-radius:6px;
-      background:#fff;
-      cursor:pointer;
-      transition:.2s;
-    }
-
-    .speed-btn:hover { background:var(--brand); color:#fff; }
-    .speed-btn.active { background:var(--brand); color:#fff; }
-
-    /* VÍDEO */
     iframe {
-      display:block;
-      margin:24px auto;
-      border-radius:10px;
-      box-shadow:0 0 12px rgba(0,0,0,0.15);
-      max-width:100%;
-      transition:transform .2s;
+      width: 100%;
+      height: 650px;
+      border: none;
+      border-radius: 10px;
     }
-
-    iframe:hover { transform: scale(1.02); }
-
-    /* FORMULÁRIO */
-    .avaliacao {
-      background:#e9f0ff;
-      border:1px solid #c3d0f0;
-      border-radius:10px;
-      padding:25px;
-      max-width:720px;
-      margin:40px auto;
-      text-align:center;
-      box-shadow:0 0 10px rgba(0,0,0,.06);
-    }
-
-    .avaliacao h3 { color:var(--brand); }
-
-    .avaliacao a {
-      display:inline-block;
-      background:var(--brand);
-      color:#fff;
-      padding:10px 18px;
-      border-radius:6px;
-      font-weight:bold;
-      margin-top:14px;
-      text-decoration:none;
-    }
-
-    .avaliacao a:hover { background:#001f40; }
-
-    /* REFERÊNCIAS */
-    .referencias {
-      max-width:900px;
-      margin:42px auto;
-      font-size:0.9em;
-      line-height:1.3;
-    }
-
-    .referencias h3 { color:var(--brand); }
-
-    /* RODAPÉ */
-    footer {
-      background:var(--brand);
-      text-align:center;
-      padding:24px 10px;
-      border-radius:8px;
-      margin-top:50px;
-      color:#fff;
-      font-size:14px;
-      line-height:1.5;
-    }
-
-    footer a { color:white; font-weight:bold; }
   </style>
 </head>
 
 <body>
 
   <!-- BANNER -->
-  <img src="banner2.png" alt="Banner da aula 3">
+  <img src="banner2.png" alt="Banner da aula">
 
-  <!-- FLIPBOOK INCORPORADO (FlipHTML5) -->
-  <h2>Flipbook da aula</h2>
-  <div style="left:0; width:100%; height:0; position:relative; padding-bottom:75%; max-width:900px; margin:0 auto 40px;">
-    <iframe
-      src="https://example.com/seu-flipbook"
-      style="top:0; left:0; width:100%; height:100%; position:absolute; border:0;"
-      allowfullscreen
-      scrolling="no">
+  <!-- FLIPBOOK -->
+  <h2>E-book completo</h2>
+
+  <div class="flipbook-wrapper">
+    <iframe 
+      allowfullscreen="allowfullscreen"
+      allow="clipboard-write"
+      scrolling="no"
+      src="https://heyzine.com/flip-book/e123771916.html">
     </iframe>
   </div>
 
-  <!-- LIVRO DIGITAL ABAIXO DO FLIPBOOK -->
-  <div class="livro-container" id="livro">
-    
-    <!-- PÁGINA 1 -->
-    <div class="livro-pagina ativa">
-      <div class="livro-titulo">Apresentação da Aula</div>
-      <p>
-        Esta aula relaciona alimentação, energia e movimento. O objetivo é compreender
-        como os nutrientes dos alimentos são utilizados pelo corpo e como isso se conecta
-        com atividade física, saúde e qualidade de vida.
-      </p>
-      <p>
-        Ao longo das páginas, leia com atenção e faça conexões com a sua rotina:
-        o que você come, quanto se movimenta e como se sente ao longo do dia.
-      </p>
-    </div>
-
-    <!-- PÁGINA 2 -->
-    <div class="livro-pagina">
-      <div class="livro-titulo">Nutrientes e Funções</div>
-      <p>
-        Os alimentos são formados por nutrientes. Eles fornecem energia, constroem
-        e reparam tecidos e regulam processos biológicos. Dividem-se em macronutrientes
-        e micronutrientes.
-      </p>
-      <p class="livro-subtitulo">Macronutrientes</p>
-      <p>
-        Carboidratos fornecem glicose para cérebro e músculos. Proteínas participam
-        da formação de músculos, pele e órgãos. Gorduras fornecem energia concentrada
-        e participam da produção hormonal e da proteção de órgãos.
-      </p>
-      <p class="livro-subtitulo">Micronutrientes</p>
-      <p>
-        Vitaminas e minerais regulam reações químicas, imunidade e formação óssea.
-        Estão presentes em frutas, verduras, legumes, grãos integrais, carnes e ovos.
-      </p>
-    </div>
-
-    <!-- PÁGINA 3 -->
-    <div class="livro-pagina">
-      <div class="livro-titulo">Água e Organização da Alimentação</div>
-      <p>
-        A água corresponde a cerca de dois terços do peso corporal. Participa da digestão,
-        da absorção de nutrientes, da circulação e da regulação da temperatura.
-        A hidratação insuficiente prejudica concentração e desempenho físico.
-      </p>
-      <p class="livro-subtitulo">Grupos de alimentos</p>
-      <p>
-        Modelos como a pirâmide alimentar organizam os alimentos em grupos: base energética
-        (grãos e tubérculos), reguladores (frutas, verduras e legumes), construtores
-        (carnes, ovos, leite, leguminosas) e topo (açúcares, gorduras e ultraprocessados,
-        que devem ter consumo ocasional).
-      </p>
-    </div>
-
-    <!-- PÁGINA 4 -->
-    <div class="livro-pagina">
-      <div class="livro-titulo">Digestão, Metabolismo e Energia</div>
-      <p>
-        O sistema digestório transforma os alimentos em moléculas menores.
-        A digestão e a absorção ocorrem na boca, estômago, intestino delgado, fígado
-        e intestino grosso. Após a absorção, os nutrientes entram nas células
-        e são convertidos em energia química (ATP).
-      </p>
-      <p class="livro-subtitulo">Balanço energético</p>
-      <p>
-        O peso corporal depende do equilíbrio entre ingestão e gasto de energia.
-        Quando o consumo é maior que o gasto, ocorre acúmulo de gordura.
-        Quando o gasto é maior, o corpo utiliza reservas energéticas.
-      </p>
-    </div>
-
-    <!-- PÁGINA 5 -->
-    <div class="livro-pagina">
-      <div class="livro-titulo">Alimentação, Movimento e Saúde</div>
-      <p>
-        A combinação de alimentação rica em ultraprocessados, alto consumo calórico
-        e baixo nível de atividade física está associada a obesidade, diabetes tipo 2,
-        hipertensão arterial e doenças cardiovasculares.
-      </p>
-      <p>
-        A prática regular de atividade física contribui para o controle da glicemia,
-        da pressão arterial, da composição corporal e do sono. Para adolescentes,
-        recomenda-se acumular tempo diário de atividade física de intensidade
-        moderada a vigorosa.
-      </p>
-    </div>
-
-    <!-- PÁGINA 6 -->
-    <div class="livro-pagina">
-      <div class="livro-titulo">Alimentação, Sono e Saúde Mental</div>
-      <p>
-        Alimentação, sono e atividade física influenciam humor, atenção e desempenho escolar.
-        Rotinas muito restritivas, uso inadequado de medicamentos e padrões alimentares
+</body>
+</html>
