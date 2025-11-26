@@ -7,6 +7,7 @@
   <style>
     :root { 
       --brand: #003366;
+      --brand-light: #e0e6f5;
       --bg-light: #f5f7fb;
       --text: #333;
     }
@@ -26,47 +27,68 @@
       max-width: 100%;
     }
 
+    h1 {
+      text-align: center;
+      color: var(--brand);
+      font-size: 2rem;
+      margin-top: 5px;
+    }
+
     h2 {
+      color: var(--brand);
       text-align:center;
-      color:var(--brand);
       margin:40px auto 24px;
-      font-size: 1.6rem;
-    }
-
-    /* Flipbook responsivo */
-    .flipbook-wrapper {
       max-width: 900px;
-      margin: 0 auto 40px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 12px rgba(0,0,0,0.12);
     }
 
-    iframe {
-      width: 100%;
-      height: 650px;
-      border: none;
-      border-radius: 10px;
+    h3, h4, h5 {
+      color: var(--brand);
+      max-width: 900px;
+      margin:30px auto 10px;
     }
-  </style>
-</head>
 
-<body>
+    p {
+      max-width: 900px;
+      margin: 10px auto;
+      text-align: justify;
+    }
 
-  <!-- BANNER -->
-  <img src="banner2.png" alt="Banner da aula">
+    ul {
+      max-width: 900px;
+      margin: 20px auto;
+      text-align: justify;
+      line-height: 1.6;
+    }
 
-  <!-- FLIPBOOK -->
-  <h2>E-book completo</h2>
+    /* LIVRO DIGITAL */
+    .livro-container {
+      max-width: 900px;
+      margin: 30px auto 10px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.06);
+      padding: 24px 26px 28px;
+      position: relative;
+    }
 
-  <div class="flipbook-wrapper">
-    <iframe 
-      allowfullscreen="allowfullscreen"
-      allow="clipboard-write"
-      scrolling="no"
-      src="https://heyzine.com/flip-book/e123771916.html">
-    </iframe>
-  </div>
+    .livro-pagina { display: none; }
+    .livro-pagina.ativa { display: block; }
 
-</body>
-</html>
+    .livro-titulo {
+      font-weight: bold;
+      color: var(--brand);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .livro-subtitulo {
+      font-weight: bold;
+      color: var(--brand);
+      margin-top: 14px;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .livro-container p {
+      margin: 6px 0;
+      text-align: justify;
