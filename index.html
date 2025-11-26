@@ -2,37 +2,35 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <title>O Corpo Humano Funciona a partir das Escolhas que Fazemos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conhecendo Nosso Corpo e a Energia dos Alimentos</title>
-
   <style>
     :root { 
-      --brand: #003366;
-      --bg-light: #f5f7fb;
-      --text: #333;
+      --brand: #006D6F;
+      --bg: #f8f9fa;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background: var(--bg-light);
-      color: var(--text);
+      background: var(--bg);
+      color: #333;
       margin: 40px;
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
     img {
       display:block;
       margin:0 auto 30px;
-      border-radius: 10px;
-      max-width: 100%;
+      max-width:100%;
+      border-radius:10px;
     }
 
     h2 {
-      color: var(--brand);
       text-align:center;
+      font-weight:bold;
+      color:#333;
+      max-width:900px;
       margin:40px auto 24px;
-      max-width: 900px;
-      font-size: 1.6rem;
     }
 
     p {
@@ -56,19 +54,89 @@
       text-align: left;
     }
 
+    /* FLIPBOOK */
     .flipbook-wrapper {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 12px rgba(0,0,0,0.12);
+      max-width:900px;
+      margin:40px auto;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 0 12px rgba(0,0,0,0.15);
     }
 
     .flipbook-wrapper iframe {
-      width: 100%;
-      height: 650px;
-      border: none;
-      border-radius: 10px;
+      width:100%;
+      height:650px;
+      border:none;
+    }
+
+    /* FORMULÁRIO */
+    .avaliacao {
+      background:#eef6ff;
+      border:1px solid #c7dff7;
+      border-radius:10px;
+      padding:25px;
+      max-width:720px;
+      margin:40px auto;
+      text-align:center;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .avaliacao h3 { color:var(--brand); margin-bottom:10px; }
+
+    .avaliacao p {
+      text-align: justify;
+      max-width:620px;
+      margin: 8px auto;
+    }
+
+    .avaliacao a {
+      display:inline-block;
+      background:var(--brand);
+      color:#fff;
+      padding:10px 18px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:14px;
+    }
+
+    .avaliacao a:hover { background:#004b4d; }
+
+    /* REFERÊNCIAS */
+    .referencias {
+      max-width:900px;
+      margin:42px auto 0;
+      font-size:.9em;
+      line-height:1.3;
+    }
+
+    .referencias h3 {
+      color:var(--brand);
+      font-size:1.1em;
+      font-weight:bold;
+      margin-bottom:6px;
+    }
+
+    footer {
+      text-align:center;
+      margin-top:48px;
+      font-size:14px;
+      color:#fff;
+      background:var(--brand);
+      padding:24px 10px;
+      border-radius:8px;
+      line-height:1.6;
+    }
+
+    footer a {
+      color:#fff;
+      font-weight:bold;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body { margin:20px; }
+      .flipbook-wrapper iframe { height:500px; }
     }
   </style>
 </head>
@@ -76,43 +144,66 @@
 <body>
 
   <!-- BANNER -->
-  <img src="banner2.png" alt="Banner da aula">
+  <img src="banner2.png" alt="Banner do e-book">
 
-  <!-- INTRODUÇÃO DA ATIVIDADE -->
+  <!-- INTRODUÇÃO -->
   <p>
-    Nesta atividade, você vai explorar o tema <strong>“Atividade Física, Saúde e Qualidade de Vida”</strong> de forma integrada.
+    Nesta atividade, você vai explorar temas relacionados ao funcionamento do corpo humano e à forma como suas escolhas diárias influenciam saúde, energia e bem-estar.
   </p>
   <p>
-    A proposta é que você reflita sobre o impacto do sedentarismo e das suas escolhas diárias na própria saúde e bem-estar. Pense em como o tempo que passa sentado, o uso de telas, os trajetos curtos feitos de carro ou moto e a falta de tempo para se movimentar afetam o seu corpo e a sua disposição.
-  </p>
-  <p>
-    Mais do que falar sobre exercícios, esta atividade convida você a observar o seu cotidiano, reconhecer pequenas oportunidades de movimento e compreender que cuidar do corpo é também cuidar da mente.
+    O objetivo é que você compreenda como alimentação, movimento, sono e saúde mental se conectam e moldam a forma como você vive, aprende e se relaciona com o mundo.
   </p>
 
   <p class="subtitulo">Para desenvolver esta proposta:</p>
 
   <ul>
-    <li>Leia o e-book <strong>“O corpo humano funciona a partir das escolhas que fazemos”</strong>, que apresenta as relações entre nutrição, digestão, energia, movimento, sono e saúde mental;</li>
+    <li>Leia o e-book <strong>“O corpo humano funciona a partir das escolhas que fazemos”</strong>, observando como nutrientes, digestão, metabolismo, movimento, sono e emoções se relacionam;</li>
     <li>Observe sua rotina e identifique hábitos que influenciam seu bem-estar físico e emocional;</li>
-    <li>Responda ao formulário <strong>"Consolidação do Aprendizado"</strong> e reflita sobre o que aprendeu.</li>
+    <li>Responda ao formulário <strong>"Consolidação do Aprendizado"</strong> registrando suas descobertas e reflexões.</li>
   </ul>
 
-  <!-- 🔵 PARÁGRAFO INCLUÍDO AQUI -->
   <p>
-    Após a leitura, responda ao formulário <strong>"Consolidação do Aprendizado"</strong> e registre o que você compreendeu sobre a relação entre alimentação, movimento, sono e saúde mental. Observe sua rotina com atenção: quais escolhas sustentam seu bem-estar e quais poderiam ser ajustadas? Reflita sobre os efeitos dessas decisões no seu corpo e identifique mudanças possíveis para os próximos dias. O objetivo é que você reconheça como pequenos hábitos constroem, ao longo do tempo, o caminho da sua saúde.
+    Após a leitura, reflita sobre suas escolhas diárias: quais favorecem sua saúde e quais podem ser ajustadas? Pequenas mudanças constroem, ao longo do tempo, caminhos mais saudáveis e conscientes para o corpo e para a vida.
   </p>
 
   <!-- FLIPBOOK -->
-  <h2>Flipbook da aula</h2>
+  <h2>E-book Completo</h2>
 
   <div class="flipbook-wrapper">
-    <iframe
-      allowfullscreen="allowfullscreen"
+    <iframe 
+      allowfullscreen
       allow="clipboard-write"
       scrolling="no"
       src="https://heyzine.com/flip-book/e123771916.html">
     </iframe>
   </div>
+
+  <!-- FORMULÁRIO -->
+  <div class="avaliacao">
+    <h3>📝 Consolidação do Aprendizado</h3>
+    <p>Responda ao questionário para registrar o que você aprendeu sobre alimentação, energia, movimento e saúde integral.</p>
+
+    <a href="https://forms.gle/TWmWtaDr1VnvV7ZX7" target="_blank">
+      Acessar questionário
+    </a>
+  </div>
+
+  <!-- REFERÊNCIAS -->
+  <div class="referencias">
+    <h3>Referências</h3>
+    <p>E-BOOK: O corpo humano funciona a partir das escolhas que fazemos, 2025.</p>
+    <p>HEYZINE Flipbooks – https://heyzine.com</p>
+  </div>
+
+  <footer>
+    <p>© 2025 | Professora de Educação Física | Monique T. Cezário Eleutério</p>
+    <p>
+      Este material está licenciado sob 
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+        CC BY-NC-SA 4.0
+      </a>. Uso educacional não comercial autorizado com citação.
+    </p>
+  </footer>
 
 </body>
 </html>
